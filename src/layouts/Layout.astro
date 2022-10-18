@@ -1,0 +1,21 @@
+---
+import Seo from '../components/utils/Seo.astro';
+
+export interface Props {
+    title: string;
+    lang: string;
+}
+
+const { lang } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang={lang}>
+    <head>
+        <Seo/>
+        <meta name='generator' content={Astro.generator} />
+    </head>
+    <body>
+        <slot />
+    </body>
+</html>
